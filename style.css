@@ -1,129 +1,52 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* styles.css */
+
+body {
     margin: 0;
-    background-color: #3498db;
-    overflow: hidden;
-    position: relative;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
 }
-.bubbles{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-.bubble{
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    animation: bubbleAnimation linear infinite;
-}
-.login-card,.register-card{
+
+.profile-card {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    padding: 40px;
-    transform: perspective(1000px) rotateY(15deg);
-    transition: transform 0.5s, box-shadow 0.5s;
-    border: 1px solid #2980b9;
-    margin: 0 20px;
-    position: relative;
-    z-index: 2;
 }
-.login-card h2,.register-card h2{
-    color: #3498db;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-.input-group{
-    margin-bottom: 20px;
-}
-.input-group input{
+
+.avatar-container img {
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    height: auto;
 }
-.input-group input:focus{
-    border-color: #3498db;
+
+.info-container {
+    padding: 20px;
+    text-align: center;
 }
-.checkbox-group{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+
+h1 {
+    margin: 0;
+    color: #333;
 }
-.checkbox-group input{
-    margin-right: 10px;
+
+p {
+    margin-top: 5px;
+    color: #777;
 }
-.login-btn,.register-btn{
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login-btn i,.register-btn i{
     margin-right: 10px;
 }
-.shine{
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(-30px);
-    opacity: 0;
-    animation: cardAnimation 2s infinite;
-}
-@keyframes cardAnimation{
-    0%{
-        opacity: 0;
-        transform: rotate(-30deg) translate(-50%,
-            -50%);
-    }
-    50%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(30deg) translate(50%,-50%);
-    }
-}
-.login-btn:hover,.register-btn:hover{
-    background-color: #2980b9;
-}
-.login-card:hover,.register-card:hover{
-    transform: perspective(1000px) rotateY(0deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-@keyframes bubbleAnimation{
-    to{
-        transform: translateY(-100vh);
-    }
-}
-@media only screen and (max-width: 600px){
-    .login-card,.register-card{
-        width: 100%;
-        margin: 0 25px;
-        transform: none;
-    }
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
